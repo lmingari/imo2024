@@ -5,155 +5,11 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="L. Mingari^1" />
-  <meta name="dcterms.date" content="2022-09-15" />
-  <meta name="description" content="Internal group meeting" />
-  <title>SO2 sumlat</title>
+  <meta name="author" content="S. Barsotti^2" />
+  <meta name="dcterms.date" content="2024-09-26" />
+  <meta name="description" content="Workshop, IMO, Iceland" />
+  <title>Modelling SO2 dispersion during the 2021 eruption of Fagradalsfjall, Iceland</title>
   <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -170,25 +26,37 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
+  <link rel="stylesheet" href="pandoc.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">SO2 sumlat</h1>
+<h1 class="title">Modelling SO2 dispersion during the 2021 eruption of
+Fagradalsfjall, Iceland</h1>
 <p class="author">L. Mingari<span
 class="math inline"><sup>1</sup></span></p>
-<p class="date">15 September 2022</p>
+<p class="author">S. Barsotti<span
+class="math inline"><sup>2</sup></span></p>
+<p class="date">26 September 2024</p>
 </header>
-<h1
-id="modelling-so2-dispersion-during-the-2021-eruption-of-fagradalsfjall-iceland">Modelling
-SO2 dispersion during the 2021 eruption of Fagradalsfjall, Iceland</h1>
 <h2 id="references">References</h2>
 <p>Pfeffer, Melissa A., et al. “SO2 emission rates and incorporation
 into the air pollution dispersion forecast during the 2021 eruption of
 Fagradalsfjall, Iceland.” Journal of Volcanology and Geothermal Research
-449 (2024): 108064. https://doi.org/10.1016/j.jvolgeores.2024.108064</p>
+449 (2024): 108064. <a
+href="https://doi.org/10.1016/j.jvolgeores.2024.108064"
+class="uri">https://doi.org/10.1016/j.jvolgeores.2024.108064</a></p>
+<h2 id="observations">Observations</h2>
+<p>We considered measurements of SO2 concentration at 4 ground stations
+with a radius of about 50 km between 11-Aug-2021 and 17-Aug-2021.</p>
+<p><img src="figs/stations.png" /></p>
+<p>Concentration timeseries show a diurnal variation pattern?</p>
+<p><img src="figs/diurnal.png" /></p>
+<p>Forecasts for the Boundary layer thickness show maximum heights
+around 15:00</p>
+<p><img src="figs/blh.png" /></p>
 <h2 id="numerical-simulations---configuration">Numerical simulations -
 Configuration</h2>
 <p>We performed 70-member ensemble simulations of SO2 transport using
@@ -214,12 +82,12 @@ the FALL3D model. Different source term parameters were perturbed.</p>
 </tr>
 <tr class="odd">
 <td>Wind componentes</td>
-<td>CARRA</td>
+<td>IFS on model levels</td>
 <td>20%</td>
 </tr>
 <tr class="even">
 <td>Column height</td>
-<td>Measurements (see plot below)</td>
+<td>See figure below</td>
 <td>20%</td>
 </tr>
 <tr class="odd">
@@ -230,10 +98,40 @@ the FALL3D model. Different source term parameters were perturbed.</p>
 </tbody>
 </table>
 <h3 id="meteorological-dataset">Meteorological dataset</h3>
-<p>Carra reanalysis at 2.5-km resolution on pressure levels. Use model
-levels in the future!</p>
+<p>Operational forecasts are produced with the ECMWF Integrated
+Forecasting System (IFS) with a horizontal resolution of 9 km using 137
+layers in the vertical.</p>
 <h3 id="vertical-distribution">Vertical distribution</h3>
 <p>We explored different vertical distributions:</p>
 <p><img src="figs/vertical_distribution.png" /></p>
+<h3 id="column-height">Column height</h3>
+<p>We performed to ensemble simulations. In experiment A, the source
+term is defined from a timeseries of column height estimations. In
+experiment B, a fixed column height is assumed (1500 m above the
+vent).</p>
+<p><img src="figs/source_term.png" /></p>
+<h2 id="results-ensemble-variability">Results: Ensemble variability</h2>
+<h3 id="experiment-a">Experiment A</h3>
+<p><img src="figs/ensA.png" /></p>
+<h3 id="experiment-b">Experiment B</h3>
+<p><img src="figs/ensB.png" /></p>
+<h2 id="results-so2-dispersion-control-member">Results: SO2 dispersion
+(control member)</h2>
+<video width=100% controls>
+<source src="figs/maps.mp4" type="video/mp4">
+</video>
+<h2 id="results-best-ensemble-member">Results: Best ensemble member</h2>
+<p>The linear correlation between every member and the observations was
+computed and the best ensemble member was selected:</p>
+<h3 id="experiment-a-1">Experiment A</h3>
+<p><img src="figs/bestA.png" /></p>
+<p>Precision = TP/(TP+FP) = 25%</p>
+<h3 id="experiment-b-1">Experiment B</h3>
+<p><img src="figs/bestB.png" /></p>
+<p>Precision = TP/(TP+FP) = 27%</p>
+<h2 id="results-vertical-mixing">Results: Vertical mixing</h2>
+<video width=100% controls>
+<source src="figs/cross.mp4" type="video/mp4">
+</video>
 </body>
 </html>
